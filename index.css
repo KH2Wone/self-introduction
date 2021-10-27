@@ -1,0 +1,40 @@
+@import url('./default.css');
+
+/*//////////////////////////////////////*/
+main {
+    background: url(../img/bg_paperTexture.jpeg) repeat center;
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+
+}
+
+#main figure {
+    width: 30%;
+}
+
+#main figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+aside {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    padding: 7px 10px;
+    box-sizing: border-box;
+    font-size: 2rem;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px -10px 20px -5px rgba(0, 0, 0, .2);
+}
+
+aside em {
+    font-weight: 700;
+    text-decoration: underline;
+    color: red;
+}
+
