@@ -1,25 +1,262 @@
 @import url('./default.css');
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
 
 /*//////////////////////////////////////*/
+
 main {
     background: url(../img/bg_paperTexture.jpeg) repeat center;
     width: 100%;
-    height: 100%;
+    padding-bottom: 42px;
 }
 
-#main {
-
+#home, #about, #fav {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
 }
 
-#main figure {
-    width: 30%;
+/* || home */
+#home {
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - 42px);
+}
+#home::after {
+    content: 'KANGHEEWON KANGHEEWON KANGHEEWON KANGHEEWON';
+    font-size: 2.3vw;
+    color: rgba(0, 0, 0, .2);
+    transform: rotate(-30deg);
+    display: block;
+    position: absolute;
+    letter-spacing: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    top: 30vw;
+    left: -17vw;
 }
 
-#main figure img {
+
+#home figure {
+    width: 27vw;
+    padding: 3vw 1vw;
+    display: block;
+}
+
+#home figure img {
     max-width: 100%;
     height: auto;
 }
 
+#home ul {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    overflow: hidden;
+}
+
+#home ul li {
+    line-height: 1;
+    letter-spacing: 30px;
+    z-index: 1;
+}
+
+#home ul li:first-child {
+    text-align: right;
+    padding-right: 4.5vw;
+    padding-top: 7vw;
+}
+
+#home ul li:last-child {
+    padding-left: 5vw;
+    padding-top: 8vw;
+}
+
+#home ul li:last-child::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 22vw;
+    right: -5vw;
+    border-radius: 50%;
+    width: 30vw;
+    height: 30vw;
+    background: linear-gradient(to bottom right, #2E62A6, #2E3D59);
+}
+
+#home ul li a {
+    font-size: 15vw;
+    font-family: 'Rozha One', serif;
+    color: #000;
+}
+
+#home ul li:last-child a {
+    z-index: 2;
+    position: relative;
+}
+
+/* || about */
+#about {
+    width: 90%;
+    height: calc(100vh - 42px);
+    margin: 0 auto;
+    padding: 3vw 0px;
+}
+
+#about h2 {
+    display: none;
+}
+
+/* about_info */
+.about_info {
+    width: 100%;
+    height: 70%;
+    clear: both;
+}
+
+/* about_info > info */
+.info {
+    width: 60%;
+    height: 100%;
+    float: left;
+    padding: 5% 0px;
+    box-sizing: border-box;
+}
+.info h3 {
+    font-size: 5rem;
+}
+
+.info h3 b {
+    font-weight: 100;
+}
+
+/* info > priv */
+.priv li {
+    font-size: 3rem;
+    letter-spacing: 10px;
+    padding-top: 10px;
+}
+
+/* info > contact */
+.contact {
+    padding-top: 26px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+.contact li {
+    font-size: 3rem;
+    padding: 15px 25px;
+    background-color: #000;
+    margin: 10px 0px;
+    color: #fff;
+}
+
+.contact li:first-child {
+    margin-left: 0px;
+}
+
+.contact li i {
+    padding-right: 17px;
+}
+
+.contact li a {
+    display: block;
+    width: 100%;
+}
+
+/* about_info > figure */
+.about_info figure {
+    float: right;
+    width: 40%;
+    height: 100%;
+}
+
+.about_info figure img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: right;
+}
+
+/* about_record */
+.about_record {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    padding-top: 3vw;
+}
+
+/* career, edu, certifi */
+.about_record > div {
+    width: 33.3333333%;
+    margin: 0px 2%;
+    box-sizing: border-box;
+}
+
+.about_record > div:first-child,
+.about_record > div:last-child {
+    margin: 0px;
+}
+
+.about_record > div h3 {
+    font-size: 5rem;
+}
+
+.about_record > div ul {
+    padding: 0.5vw 0px;
+}
+
+.about_record > div ul li:first-child {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.about_record > div ul li:last-child {
+    font-size: 1.8rem;
+}
+
+.about_record > div ul li h4 {
+    font-weight: 400;
+}
+
+
+
+/* || fav */
+#fav {
+    padding: 6vw 7% 10vw;
+}
+#fav h2 {
+    font-size: 15rem;
+    text-align: center;
+}
+
+#fav ul li {
+    display: inline-block;
+    font-size: 2.2rem;
+    padding: 0.95vw 2vw;
+    border-radius: 50px;
+    background-color: #ccc;
+    color: #333;
+    margin: 10px 5px;
+}
+
+#fav ul li:hover {
+    background: rgba(204, 204, 204, 0.575);
+}
+
+#fav ul li::before {
+    content: '#';
+    display: inline-block;
+    padding-right: 10px;
+}
+
+
+
+
+/* || aside contact me */
 aside {
     width: 100%;
     position: fixed;
