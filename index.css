@@ -4,7 +4,7 @@
 /*//////////////////////////////////////*/
 
 main {
-    background: url(../img/bg_paperTexture.jpg) repeat center;
+    background: url(./img/bg_paperTexture.jpg) repeat center;
     width: 100%;
     padding-bottom: 42px;
 }
