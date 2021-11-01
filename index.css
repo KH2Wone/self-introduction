@@ -94,6 +94,20 @@ main {
 #home ul li a {
     z-index: 1;
     position: relative;
+
+    background-image: linear-gradient(transparent calc(100% - 3px), #000 3px);
+    background-repeat: no-repeat;
+    background-size: 0% 85%;
+    transition: background-size 0.7s;
+}
+
+/* home a href hover */
+#home ul li a {
+    background-image: linear-gradient(transparent 65%, #F8CD07 35%);
+}
+
+#home ul li a:hover {
+    background-size: 100% 85%;
 }
 
 /* || about */
@@ -202,6 +216,10 @@ main {
 
 .about_record > div h3 {
     font-size: 5rem;
+    background: linear-gradient(1deg, #B33BF5 25%, #000 72%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .about_record > div ul {
