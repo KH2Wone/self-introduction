@@ -113,7 +113,7 @@ main {
 /* || about */
 #about {
     width: 90%;
-    height: calc(100vh - 42px);
+    /* height: calc(100vh - 42px); */
     margin: 0 auto;
     padding: 3vw 0px;
 }
@@ -125,16 +125,15 @@ main {
 /* about_info */
 .about_info {
     width: 100%;
-    height: 70%;
-    clear: both;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* height: 70%; */
 }
 
 /* about_info > info */
 .info {
-    width: 60%;
     height: 100%;
-    float: left;
-    padding: 5% 0px;
+    /* padding: 5% 0px; */
     box-sizing: border-box;
 }
 .info h3 {
@@ -160,15 +159,20 @@ main {
 }
 
 .contact li {
-    font-size: 3rem;
-    padding: 15px 25px;
+    font-size: 2rem;
+    padding: 1vw 2vw;
     background-color: #000;
-    margin: 10px 0px;
+    margin: 1vw 0px;
     color: #fff;
 }
 
 .contact li:first-child {
     margin-left: 0px;
+    margin-top: 0px;
+}
+
+.contact li:last-child {
+    margin-bottom: 0px;
 }
 
 .contact li i {
@@ -182,8 +186,6 @@ main {
 
 /* about_info > figure */
 .about_info figure {
-    float: right;
-    width: 40%;
     height: 100%;
 }
 
@@ -197,7 +199,7 @@ main {
 /* about_record */
 .about_record {
     width: 100%;
-    height: 30%;
+    /* height: 30%; */
     display: flex;
     padding-top: 3vw;
 }
@@ -259,10 +261,7 @@ main {
     border-radius: 50px;
     color: #fff;
     margin: 10px 5px;
-}
-
-#fav ul li:hover {
-    opacity: 0.7;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.1);
 }
 
 #fav ul li::before {
