@@ -103,6 +103,10 @@ html {
     height: 100%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     line-height: 1;
     font-size: 1.5rem;
