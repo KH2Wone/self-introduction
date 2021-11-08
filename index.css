@@ -82,7 +82,9 @@ main {
     border-radius: 50%;
     width: 27vw;
     height: 27vw;
-    background: linear-gradient(to bottom right, #2E62A6, #2E3D59);
+    background: linear-gradient(to bottom right, #5798ed, #2E3D59);
+
+    animation: spinCircle 2.5s linear infinite;
 }
 
 #home ul li a {
@@ -99,16 +101,54 @@ main {
     background-repeat: no-repeat;
     background-size: 0% 85%;
     transition: background-size 0.7s;
+
+    background-image: linear-gradient(transparent 65%, #F8CD07 35%);
 }
 
 /* home a href hover */
 #home ul li a {
-    background-image: linear-gradient(transparent 65%, #F8CD07 35%);
+    animation-duration: 1s;
 }
 
 #home ul li a:hover {
     background-size: 100% 85%;
 }
+
+#home ul li:first-child a {
+    animation-name: leftSide;
+}
+
+#home ul li:last-child a {
+    animation-name: rightSide;
+    right: -100%;
+    animation-delay: .7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes leftSide {
+    from{
+        left: -100%;
+    }
+    to{
+        left: 0%;
+    }
+}
+
+@keyframes rightSide {
+    from {
+        right: -100%;
+    }
+    to {
+        right: 0%;
+    }
+}
+
+@keyframes spinCircle {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 /* || about */
 #about {
