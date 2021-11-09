@@ -247,14 +247,8 @@ main {
 
 /* career, edu, certifi */
 .about_record > div {
-    /* width: 33.3333333%; */
-    /* margin: 0px 2%; */
     box-sizing: border-box;
-}
-
-.about_record > div:first-child,
-.about_record > div:last-child {
-    margin: 0px;
+    padding: 0px 20px;
 }
 
 .about_record > div h3 {
@@ -293,6 +287,8 @@ main {
 #fav h2 {
     font-size: 15rem;
     text-align: center;
+    color: #fff;
+    text-shadow: 22px 19px 10px #999;
 }
 
 #fav ul li {
@@ -355,10 +351,41 @@ aside em {
     #fav {
         display: grid;
         place-items: center;
-        height: calc(100vh - 42px);
+        /* height: calc(100vh - 42px); */
     }
 
     #fav ul li {
         margin: 2vw 0.5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #home ul li {
+        letter-spacing: 3vw;
+    }
+
+    #fav {
+        padding: 2vw 4% 10vw;
+    }
+
+    #fav h2 {
+        font-size: 12vw;
+        text-align: right;
+    }
+
+    #fav ul li {
+        padding: 1.95vw 3vw;
+    }
+
+    .info h3 {
+        font-size: 3.5rem;
+    }
+
+    .priv li {
+        font-size: 2rem;
+    }
+
+    .contact li {
+        font-size: 1.5rem;
     }
 }
