@@ -288,7 +288,7 @@ main {
     font-size: 15rem;
     text-align: center;
     color: #fff;
-    text-shadow: 22px 19px 10px #999;
+    text-shadow: 5px 1px 5px #999;
 }
 
 #fav ul li {
@@ -335,7 +335,7 @@ aside em {
 /* || media query */
 @media (max-width: 1024px) {
     #home {
-        padding-top: 35%;
+        padding-top: 5em;
     }
 
     #home ul li:last-child::after {
@@ -387,5 +387,57 @@ aside em {
 
     .contact li {
         font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 540px) {
+    #about {
+        height: 100%;
+        padding: 4% 0px 10%;
+    }
+
+    .about_record {
+        display: block;
+    }
+
+    .about_record > div {
+        padding-left: 0px;
+        padding-top: 7%;
+    }
+
+    .about_record > div h3 {
+        font-size: 2rem;
+    }
+
+    .about_record > div ul li:first-child {
+        font-size: 1.5rem;
+    }
+
+    .about_record > div ul li:last-child {
+        font-size: 1.4rem;
+    }
+
+    .info h3 {
+        font-size: 1.8rem;
+    }
+
+    .priv li {
+        font-size: 1.4rem;
+        letter-spacing: 3px;
+    }
+
+    .contact {
+        padding-top: 2vw;
+        padding-right: 3vw;
+    }
+
+    .contact li {
+        font-size: 1rem;
+    }
+
+    #fav ul li {
+        padding: 1vw 2vw;
+        font-size: 1.6rem;
+        margin: 1vw 0.3vw;
     }
 }
