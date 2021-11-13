@@ -10,7 +10,9 @@ main {
     overflow-x: hidden;
 }
 
-#home, #about, #fav {
+#home,
+#about,
+#fav {
     width: 100%;
     box-sizing: border-box;
     position: relative;
@@ -23,6 +25,7 @@ main {
     height: calc(100vh - 42px);
     margin-bottom: 10vw;
 }
+
 #home::after {
     content: 'KANGHEEWON KANGHEEWON KANGHEEWON KANGHEEWON';
     font-size: 2.3vw;
@@ -126,10 +129,11 @@ main {
 }
 
 @keyframes leftSide {
-    from{
+    from {
         left: -100%;
     }
-    to{
+
+    to {
         left: 0%;
     }
 }
@@ -138,6 +142,7 @@ main {
     from {
         right: -100%;
     }
+
     to {
         right: 0%;
     }
@@ -154,7 +159,7 @@ main {
 #about {
     width: 90%;
     height: calc(100vh - 42px);
-    margin: 0 auto;
+    margin: 0 auto 5vw;
     padding: 3vw 0px;
 }
 
@@ -176,6 +181,7 @@ main {
     /* padding: 5% 0px; */
     box-sizing: border-box;
 }
+
 .info h3 {
     font-size: 5rem;
 }
@@ -246,12 +252,12 @@ main {
 }
 
 /* career, edu, certifi */
-.about_record > div {
+.about_record>div {
     box-sizing: border-box;
     padding: 0px 20px;
 }
 
-.about_record > div h3 {
+.about_record>div h3 {
     font-size: 5vw;
     background: linear-gradient(1deg, #B33BF5 25%, #000 72%);
     background-clip: text;
@@ -259,21 +265,21 @@ main {
     color: transparent;
 }
 
-.about_record > div ul {
+.about_record>div ul {
     padding: 0.5vw 0px;
 }
 
-.about_record > div ul li:first-child {
+.about_record>div ul li:first-child {
     font-size: 2rem;
     font-style: italic;
     font-weight: 600;
 }
 
-.about_record > div ul li:last-child {
+.about_record>div ul li:last-child {
     font-size: 1.8rem;
 }
 
-.about_record > div ul li h4 {
+.about_record>div ul li h4 {
     font-weight: 400;
 }
 
@@ -284,11 +290,13 @@ main {
     padding: 2vw 7% 10vw;
     margin-top: 5vw;
 }
+
 #fav h2 {
     font-size: 15rem;
     text-align: center;
     color: #fff;
     text-shadow: 5px 1px 5px #999;
+    animation: bounce .3s ease-in-out infinite alternate;
 }
 
 #fav ul li {
@@ -298,13 +306,43 @@ main {
     border-radius: 50px;
     color: #fff;
     margin: 10px 5px;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+    /* animation: bounce .3s ease-in-out infinite alternate; */
+}
+
+#fav ul li:hover,
+#fav ul li:active {
+    animation: bounceCont .3s ease-in-out infinite alternate;
 }
 
 #fav ul li::before {
     content: '#';
     display: inline-block;
     padding-right: 10px;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 4px);
+    }
+}
+
+@keyframes bounceCont {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(4px, 0);
+    }
+
+    100% {
+        transform: translate(0, 2px);
+    }
 }
 
 
@@ -400,20 +438,20 @@ aside em {
         display: block;
     }
 
-    .about_record > div {
+    .about_record>div {
         padding-left: 0px;
         padding-top: 7%;
     }
 
-    .about_record > div h3 {
+    .about_record>div h3 {
         font-size: 2rem;
     }
 
-    .about_record > div ul li:first-child {
+    .about_record>div ul li:first-child {
         font-size: 1.5rem;
     }
 
-    .about_record > div ul li:last-child {
+    .about_record>div ul li:last-child {
         font-size: 1.4rem;
     }
 
